@@ -32,7 +32,11 @@
  - 読んだ(公式を始めに読まない癖を直そう・・・): https://hub.docker.com/_/wordpress/
 #### 2018/06/15
 - 読んでる(docker stack とは): https://qiita.com/takyam/items/058865f1e1fb185e9fc4
-### phase2: python の web アプリを作る
+
+### phase2: AWS を使う
+* 自腹 or 会社のアカウント？自腹でもいいけど
+
+### phase3: python の web アプリを作る
 
 * プログラミングの勘を取り戻す。
 * ワークフロー的な何かを excel ? 画像？に書き出す感じの何かを作る？
