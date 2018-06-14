@@ -106,6 +106,104 @@ Status: Downloaded newer image for docker/whalesay:latest
 Status: Downloaded newer image for wordpress:latest
 
 ```
-* 次どうしたら？
+
+サイトのコピペを実行したら、
+```
+# docker-compose.yml
+version: "3"
+
+services:
+
+  wp:
+    image: wordpress
+    ports:
+      - "8080:80"
+    volumes:
+      - ./wp:/var/www/html
+      - ./my-great-theme:/var/www/html/wp-content/themes/my-great-theme
+    depends_on:
+      - db
+
+  db:
+    image: mysql
+    volumes:
+      - ./db:/var/lib/mysql
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: moe
+      MYSQL_PASSWORD: wppass
+```
+-> webフロントで、[Error establishing a database connection]
+->
+```
+% docker-compose up                                              (git)-[master]
+Creating network "wp_default" with the default driver
+Creating wp_db_1 ... done
+Creating wp_wp_1 ... done
+Attaching to wp_db_1, wp_wp_1
+db_1  | 2018-06-14T05:20:47.108029Z 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+db_1  | 2018-06-14T05:20:47.109465Z 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.11) starting as process 1
+wp_1  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+wp_1  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+db_1  | mbind: Operation not permitted
+db_1  | mbind: Operation not permitted
+wp_1  | [Thu Jun 14 05:20:47.546008 2018] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.6 configured -- resuming normal operations
+wp_1  | [Thu Jun 14 05:20:47.546146 2018] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+db_1  | 2018-06-14T05:20:48.417382Z 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+db_1  | 2018-06-14T05:20:48.431510Z 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+db_1  | 2018-06-14T05:20:48.455274Z 0 [Warning] [MY-010315] [Server] 'user' entry 'mysql.infoschema@localhost' ignored in --skip-name-resolve mode.
+db_1  | 2018-06-14T05:20:48.455774Z 0 [Warning] [MY-010315] [Server] 'user' entry 'mysql.session@localhost' ignored in --skip-name-resolve mode.
+db_1  | 2018-06-14T05:20:48.455856Z 0 [Warning] [MY-010315] [Server] 'user' entry 'mysql.sys@localhost' ignored in --skip-name-resolve mode.
+db_1  | 2018-06-14T05:20:48.455876Z 0 [Warning] [MY-010315] [Server] 'user' entry 'root@localhost' ignored in --skip-name-resolve mode.
+db_1  | 2018-06-14T05:20:48.456697Z 0 [Warning] [MY-010323] [Server] 'db' entry 'performance_schema mysql.session@localhost' ignored in --skip-name-resolve mode.
+db_1  | 2018-06-14T05:20:48.456941Z 0 [Warning] [MY-010323] [Server] 'db' entry 'sys mysql.sys@localhost' ignored in --skip-name-resolve mode.
+db_1  | 2018-06-14T05:20:48.457040Z 0 [Warning] [MY-010311] [Server] 'proxies_priv' entry '@ root@localhost' ignored in --skip-name-resolve mode.
+db_1  | 2018-06-14T05:20:48.464353Z 0 [Warning] [MY-010330] [Server] 'tables_priv' entry 'user mysql.session@localhost' ignored in --skip-name-resolve mode.
+db_1  | 2018-06-14T05:20:48.464397Z 0 [Warning] [MY-010330] [Server] 'tables_priv' entry 'sys_config mysql.sys@localhost' ignored in --skip-name-resolve mode.
+db_1  | 2018-06-14T05:20:48.475243Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.11'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+wp_1  | 172.19.0.1 - - [14/Jun/2018:05:21:02 +0000] "GET / HTTP/1.1" 500 556 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:60.0) Gecko/20100101 Firefox/60.0"
+wp_1  | 172.19.0.1 - - [14/Jun/2018:05:21:03 +0000] "GET /favicon.ico HTTP/1.1" 200 228 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:60.0) Gecko/20100101 Firefox/60.0"
+```
+```
+ % docker exec wp_wp_1 cat /var/www/html/wp-config.php
+```
+ある。
+マウントされているため、docker-mokumoku/wp/wp/wp-config.php をいじるとすぐに反映される！
+
+で、WPALLOWREPAIR -> true
+にしても、うまくいかない。
+
+そこで、docker hub / wordpress イメージ公式(最初にみようよ私！)
+を見て、docker-compose.yml を修正
+
+で、mysql に
+
+> MySQL Connection Error: (1045)
+
+と出たため、
+
+> https://qiita.com/banrui/items/5669427f61cafc39162d
+
+を参考に修正。
+
+```
+Access denied for user 'root'@'172.19.0.2' (using password: YES)
+```
+と出てしまう。パスワードの設定がだめみたい。
+
+* stack を使う
+
+docker hub wordpress 公式の stack.yml をコピペして、docker stack コマンドを打つも、事前にやれっていうコマンドが出てきたため打つ。
+```
+$ docker swarm join-token manager
+$ docker swarm join --token SWMTKN-1-0ccr13y4s24m1zw5x4kvwj5zji91tsjzktpgwkr80l29jkzc2c-4s1vdjtjdq26nj2wdc3gj8ub6 192.168.65.3:2377
+$ docker stack deploy -c stack.yml wordpress
+```
+
+そうしたら、wordpress 初期設定画面が出たー！
+
+* ボリュームのマウント
+stack でできるの？？
 
 ## デザイン自動ビルド

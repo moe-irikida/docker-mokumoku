@@ -28,8 +28,10 @@
  - intellij, Sublime Text, Workbench を DL
  - 読んだが古かった: https://tech.recruit-mp.co.jp/infrastructure/post-11266/
 #### 2018/06/14
- - 読んでる: https://ginpen.com/2017/11/08/docker-official-wordpress/
-
+ - 読んだ: https://ginpen.com/2017/11/08/docker-official-wordpress/
+ - 読んだ(公式を始めに読まない癖を直そう・・・): https://hub.docker.com/_/wordpress/
+#### 2018/06/15
+- 読んでる(docker stack とは): https://qiita.com/takyam/items/058865f1e1fb185e9fc4
 ### phase2: python の web アプリを作る
 
 * プログラミングの勘を取り戻す。
