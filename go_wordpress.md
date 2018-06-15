@@ -204,6 +204,19 @@ $ docker stack deploy -c stack.yml wordpress
 そうしたら、wordpress 初期設定画面が出たー！
 
 * ボリュームのマウント
-stack でできるの？？
-
+stack でできるの？？簡易ビルドみたいで、ないなあ
+* docker-compose で作成
+```
+$ docker-compose -f stack.yml up
+```
+ * よく使うコマンド docker kill all
+```
+$ docker kill $(docker ps -q)
+```
+なんか変なプロセスを落とした。苦戦した
+```
+$ docker rmi $(docker images)
+$ docker stack rm wordpress
+% docker swarm leave --force
+```
 ## デザイン自動ビルド
