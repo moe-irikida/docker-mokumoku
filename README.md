@@ -31,7 +31,11 @@
  - 読んだ: https://ginpen.com/2017/11/08/docker-official-wordpress/
  - 読んだ(公式を始めに読まない癖を直そう・・・): https://hub.docker.com/_/wordpress/
 #### 2018/06/15
-- 読んでる(docker stack とは): https://qiita.com/takyam/items/058865f1e1fb185e9fc4
+- 読んだ(docker stack とは): https://qiita.com/takyam/items/058865f1e1fb185e9fc4
+- 読んだ: http://naremo.jp/2016/11/docker-wordpress/, https://www.kimurak.net/wordpress/wordpress/2505/
+
+#### 2018/06/18
+- 読んでる: https://www.webprofessional.jp/wordpress-theme-automation-with-gulp/
 
 ### phase2: AWS を使う
 * 自腹 or 会社のアカウント？自腹でもいいけど
@@ -46,3 +50,5 @@
  * CacooやGliffy
 * もちろん docker を使う？？
 * django 使ってみたい
+
+### phase 4: Node.js をさわる
