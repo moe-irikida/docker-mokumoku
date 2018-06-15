@@ -217,6 +217,14 @@ $ docker kill $(docker ps -q)
 ```
 $ docker rmi $(docker images)
 $ docker stack rm wordpress
-% docker swarm leave --force
+$ docker swarm leave --force
 ```
+* 1.rootで作成OK
+* 2.破棄して、一般DBユーザで作成OK
+
+```
+$ docker-compose down
+$ docker-compose up -d
+```
+
 ## デザイン自動ビルド
