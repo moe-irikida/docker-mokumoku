@@ -47,8 +47,12 @@
 - IAM アカウントを作成(用語よくわかってない)
 
 #### 2018/06/19
-- api gateway & lambda
-- Amazon CLI
+- Amazon CLI インストール(pipも)
+- api gateway & lambda ドキュメントを読む
+- intelliJ IDEA をさわる(IDE なつかしい)
+
+#### 2018/06/20
+- api gateway & lambda で何か作る(封神演義の声優APIとか。)
 
 ### phase3: ドキュメント作成ベストプラクティクスの調査
 * ワークフローを text で表現する記法を調べる
