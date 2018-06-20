@@ -1,0 +1,46 @@
+<li><span>太公望</span>小野賢章</li>
+<li><span>四不象</span>櫻井孝宏</li>
+<li><span>哪吒</span>古川 慎</li>
+<li><span>楊戩</span>中村悠一</li>
+<li><span>黄天化</span>KENN　</li>
+<li><span>黄飛虎</span>細谷佳正</li>
+<li><span>普賢真人</span>島﨑信長　</li>
+<li><span>妲己</span>日笠陽子</li>
+<li><span>紂王</span>浪川大輔</li>
+<li><span>聞仲</span>前野智昭</li>
+<li><span>王天君</span>岡本信彦</li>
+<li><span>申公豹</span>鳥海浩輔</li>
+<li><span>黒点虎</span>山下大輝</li>
+<li><span>黒麒麟</span>柳田淳一</li>
+<li><span>白鶴童子</span>高梨謙吾</li>
+<li><span>元始天尊</span>津田英三</li>
+<li><span>太乙真人</span>平川大輔</li>
+<li><span>胡喜媚</span>南條愛乃</li>
+<li><span>玉鼎真人</span>諏訪部順一</li>
+<li><span>道徳真君</span>森久保祥太郎</li>
+<li><span>姫昌</span>清川元夢</li>
+<li><span>伯邑考</span>羽多野 渉</li>
+<li><span>武吉</span>内田雄馬</li>
+<li><span>王魔</span>逢坂良太</li>
+<li><span>李興覇</span>天﨑滉平</li>
+<li><span>楊森</span>濱野大輝</li>
+<li><span>高友乾</span>村田太志</li>
+<li><span>姫発</span>小野大輔</li>
+<li><span>周公旦</span>内匠靖明</li>
+<li><span>通天教主</span>堀 秀行</li>
+<li><span>張天君</span>川田紳司</li>
+<li><span>孫天君</span>松岡禎丞</li>
+<li><span>姚天君</span>飛田展男</li>
+<li><span>道行天尊</span>豊崎愛生</li>
+<li><span>竜吉公主</span>早見沙織</li>
+<li><span>王貴人</span>M・A・O</li>
+<li><span>広成子</span>熊谷健太郎</li>
+<li><span>黄竜真人</span>水中雅章</li>
+<li><span>慈航道人</span>野上 翔</li>
+<li><span>董天君</span>間島淳司</li>
+<li><span>碧雲</span>諏訪彩花</li>
+<li><span>哀天君</span>福島 潤</li>
+<li><span>趙天君</span>菊池康弘</li>
+<li><span>女媧</span>坂本真綾</li>
+<li><span>金光聖母</span>森 なな子</li>
+<li><span>韋護</span>梅原裕一郎

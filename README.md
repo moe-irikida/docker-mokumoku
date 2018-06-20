@@ -52,7 +52,11 @@
 - intelliJ IDEA をさわる(IDE なつかしい)
 
 #### 2018/06/20
-- api gateway & lambda で何か作る(封神演義の声優APIとか。)
+- aws lambda をいじる。テスト用jsonを渡して、js, python で作った function を動かす。
+- でも、本質がよくわかってないかんじなので、明日ドキュメントを読んで理解を深める。
+
+#### 2018/06/21
+- api gateway & lambda で作る
 
 ### phase3: ドキュメント作成ベストプラクティクスの調査
 * ワークフローを text で表現する記法を調べる
