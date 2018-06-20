@@ -2,11 +2,14 @@
 
 ## lambda サンプルプログラムを動かしたい
 
+### GUI(Web)から動かした
+
 - 公式の Lambda サンプルのステップを動かしたい
 - https://docs.aws.amazon.com/ja_jp/lambda/latest/dg/with-on-demand-custom-android-example.html
 - ユーザを、グループに所属させる。グループは、権限がふたつ > AWSLambdaExecute, AWSLambdaBasicExecutionRole
 - cli でうまく動かなかったので、Lambda Management Console にコードやテストJsonを書いた。
 - python を書いて実行、うまくいった。
+
 
 ## API gateway を使う
 
@@ -21,3 +24,5 @@
 ```
 
 - lambda に param を渡すのが、API gateway か。そんで、json を返すのか。で、合ってるかな？
+
+### cui(cli) で動かしたい
