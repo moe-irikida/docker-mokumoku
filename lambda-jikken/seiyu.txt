@@ -1,46 +1,49 @@
-<li><span>太公望</span>小野賢章</li>
-<li><span>四不象</span>櫻井孝宏</li>
-<li><span>哪吒</span>古川 慎</li>
-<li><span>楊戩</span>中村悠一</li>
-<li><span>黄天化</span>KENN　</li>
-<li><span>黄飛虎</span>細谷佳正</li>
-<li><span>普賢真人</span>島﨑信長　</li>
-<li><span>妲己</span>日笠陽子</li>
-<li><span>紂王</span>浪川大輔</li>
-<li><span>聞仲</span>前野智昭</li>
-<li><span>王天君</span>岡本信彦</li>
-<li><span>申公豹</span>鳥海浩輔</li>
-<li><span>黒点虎</span>山下大輝</li>
-<li><span>黒麒麟</span>柳田淳一</li>
-<li><span>白鶴童子</span>高梨謙吾</li>
-<li><span>元始天尊</span>津田英三</li>
-<li><span>太乙真人</span>平川大輔</li>
-<li><span>胡喜媚</span>南條愛乃</li>
-<li><span>玉鼎真人</span>諏訪部順一</li>
-<li><span>道徳真君</span>森久保祥太郎</li>
-<li><span>姫昌</span>清川元夢</li>
-<li><span>伯邑考</span>羽多野 渉</li>
-<li><span>武吉</span>内田雄馬</li>
-<li><span>王魔</span>逢坂良太</li>
-<li><span>李興覇</span>天﨑滉平</li>
-<li><span>楊森</span>濱野大輝</li>
-<li><span>高友乾</span>村田太志</li>
-<li><span>姫発</span>小野大輔</li>
-<li><span>周公旦</span>内匠靖明</li>
-<li><span>通天教主</span>堀 秀行</li>
-<li><span>張天君</span>川田紳司</li>
-<li><span>孫天君</span>松岡禎丞</li>
-<li><span>姚天君</span>飛田展男</li>
-<li><span>道行天尊</span>豊崎愛生</li>
-<li><span>竜吉公主</span>早見沙織</li>
-<li><span>王貴人</span>M・A・O</li>
-<li><span>広成子</span>熊谷健太郎</li>
-<li><span>黄竜真人</span>水中雅章</li>
-<li><span>慈航道人</span>野上 翔</li>
-<li><span>董天君</span>間島淳司</li>
-<li><span>碧雲</span>諏訪彩花</li>
-<li><span>哀天君</span>福島 潤</li>
-<li><span>趙天君</span>菊池康弘</li>
-<li><span>女媧</span>坂本真綾</li>
-<li><span>金光聖母</span>森 なな子</li>
-<li><span>韋護</span>梅原裕一郎
+{"houshin":[
+{"character":"太公望","voice":"小野賢章"},
+{"character":"四不象","voice":"櫻井孝宏"},
+{"character":"哪吒","voice":"古川 慎"},
+{"character":"楊戩","voice":"中村悠一"},
+{"character":"黄天化","voice":"KENN　"},
+{"character":"黄飛虎","voice":"細谷佳正"},
+{"character":"普賢真人","voice":"島﨑信長　"},
+{"character":"妲己","voice":"日笠陽子"},
+{"character":"紂王","voice":"浪川大輔"},
+{"character":"聞仲","voice":"前野智昭"},
+{"character":"王天君","voice":"岡本信彦"},
+{"character":"申公豹","voice":"鳥海浩輔"},
+{"character":"黒点虎","voice":"山下大輝"},
+{"character":"黒麒麟","voice":"柳田淳一"},
+{"character":"白鶴童子","voice":"高梨謙吾"},
+{"character":"元始天尊","voice":"津田英三"},
+{"character":"太乙真人","voice":"平川大輔"},
+{"character":"胡喜媚","voice":"南條愛乃"},
+{"character":"玉鼎真人","voice":"諏訪部順一"},
+{"character":"道徳真君","voice":"森久保祥太郎"},
+{"character":"姫昌","voice":"清川元夢"},
+{"character":"伯邑考","voice":"羽多野 渉"},
+{"character":"武吉","voice":"内田雄馬"},
+{"character":"王魔","voice":"逢坂良太"},
+{"character":"李興覇","voice":"天﨑滉平"},
+{"character":"楊森","voice":"濱野大輝"},
+{"character":"高友乾","voice":"村田太志"},
+{"character":"姫発","voice":"小野大輔"},
+{"character":"周公旦","voice":"内匠靖明"},
+{"character":"通天教主","voice":"堀 秀行"},
+{"character":"張天君","voice":"川田紳司"},
+{"character":"孫天君","voice":"松岡禎丞"},
+{"character":"姚天君","voice":"飛田展男"},
+{"character":"道行天尊","voice":"豊崎愛生"},
+{"character":"竜吉公主","voice":"早見沙織"},
+{"character":"王貴人","voice":"M・A・O"},
+{"character":"広成子","voice":"熊谷健太郎"},
+{"character":"黄竜真人","voice":"水中雅章"},
+{"character":"慈航道人","voice":"野上 翔"},
+{"character":"董天君","voice":"間島淳司"},
+{"character":"碧雲","voice":"諏訪彩花"},
+{"character":"哀天君","voice":"福島 潤"},
+{"character":"趙天君","voice":"菊池康弘"},
+{"character":"女媧","voice":"坂本真綾"},
+{"character":"金光聖母","voice":"森 なな子"},
+{"character":"韋護","voice":"梅原裕一郎"}
+]
+}

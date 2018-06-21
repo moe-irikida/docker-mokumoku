@@ -1,1 +1,0 @@
-{"houshin":[{"character": "太公望", "voice": "小野賢章"},{"character": "黄天化", "voice": "KENN"}]}
