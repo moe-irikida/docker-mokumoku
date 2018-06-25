@@ -61,8 +61,13 @@
 - lambda を cui(cli) で実行しようとしたが、role や設定がダメで、こけてしまった
 
 #### 2018/06/25
+- cli で実行したくて、ACCESS_KEY の設定をする。
+- アップロードはされた旨がコンソールに出るが、関数の実行がうまくいかない。
+- AWS SAM LOCAL をインストールしたいが、python の依存ライブラリの関係で？うまくいかない。node(npm)のドキュメントはたくさん出るが・・・
+
+#### 2018/06/26
+- AWS SAM LOCAL で lambda アプリを開発したい
 - RDB & lambda & API gateway で作りたい
-- cui で実行したい。実行を簡略化したい
 
 ### phase3: ドキュメント作成ベストプラクティクスの調査
 * ワークフローを text で表現する記法を調べる
@@ -70,8 +75,3 @@
 * ? draw.io
 * ? matplotlib(グラフ描画)
 * ? CacooやGliffy
-
-### そのほか やるネタ
-
-* python の web アプリを作る - django
-* Node.js をさわる
