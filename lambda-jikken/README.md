@@ -34,27 +34,51 @@
 
 ```
 $ aws lambda create-function \
---region us-east-1 \
+--region ap-northeast-1 \
 --function-name HoushinSeiyuWikipedia  \
---zip-file fileb:///Users/moe_irikida/Workspace/gh-dwango/docker-mokumoku/test.zip \
+--zip-file fileb:///Users/moe_irikida/Workspace/gh-dwango/docker-mokumoku/lambda-jikken/test.zip \
 --role arn:aws:iam::688289487826:role/lambda-android-execution-role  \
 --handler lambda_function.lambda_handler \
 --runtime python3.6
 ```
 ```
-aws lambda \
+$ aws lambda \
     update-function-code \
     --function-name HoushinSeiyuWikipedia \
-    --zip-file fileb:///Users/moe_irikida/Workspace/gh-dwango/docker-mokumoku/test.zip \
+    --zip-file fileb:///Users/moe_irikida/Workspace/gh-dwango/docker-mokumoku/lambda-jikken/test.zip \
     --publish
 ```
 ```
-aws lambda invoke \
+$ aws lambda invoke \
 --function-name HoushinSeiyuWikipedia \
 --payload '{"title": "houshin"}' \
 outputfile.txt
 ```
--> outputfile.txt には、error が出た旨が出る
+- うまくいかない...zipファイル内にディレクトリができていた。その下にコードがある状態。本当は、ディレクトリではなく直にプログラムを置かなければいけなかった。
+```
+cd ~/Workspace/gh-dwango/docker-mokumoku/lambda-jikken/codes/
+zip ./../test.zip ./*
+```
+- invoke できた〜動いた
+
+#### sam cli version(aws-sam-cli)
+
+```
+docker run --rm -v "$PWD":/var/task lambci/lambda:python3.6 lambda_function.lambda_handler '{"title": "houshin"}'
+```
+- 一応動いた。
+- でも、ちょっとaws-sam-cli の version が古いっぽい
+- ので、pip で upgrade つまづいたのよ、
+- pip3 で入れないと、こけるんですよ
+- mac って標準でpython2系が指定されている
+- pip は 2系が紐づけられている、変えられない。
+
+```
+pip3 install --user aws-sam-cli
+pip3 install --upgrade pip
+```
+
+### AWS lambda w/ API gateway
 
 ### サーバレスアプリで db を使いたい
 
