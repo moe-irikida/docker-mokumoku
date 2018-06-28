@@ -69,8 +69,12 @@
 - AWS SAM LOCAL で lambda アプリを動かした
 - バージョンアップして、aws-sam-cli になったみたいだが、うまくバージョンアップできなかった。一応、警告なしでインストールできたかな？動作確認は明日。
 
-#### 2018/06/27
-- RDB & lambda & API gateway で作りたい
+#### 2018/06/28
+- lambda & API gateway on local
+- 自動でできた hello world 的なアプリにて、web API として動くことを確認。
+
+#### 2018/06/29
+- web API(local)に、GET パラメタ渡して内容を変えてみたい
 
 ### phase3: ドキュメント作成ベストプラクティクスの調査
 * ワークフローを text で表現する記法を調べる

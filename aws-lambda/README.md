@@ -80,6 +80,43 @@ pip3 install --upgrade pip
 
 ### AWS lambda w/ API gateway
 
+```
+$ sam init
+```
+- [sam-app] dir が作られた。中には、js が...
+```
+sam init --runtime python3.6
+```
+- おお、python project が作られたー
+```
+sam local invoke "HelloWorldFunction" --event "event.json"
+```
+> Event body: `--event {PATH}` or stdin
+> Lambda function result: stdout
+
+
+#### Setup process がこける
+- http://yuzu441.hateblo.jp/entry/2015/10/15/212314
+```
+$ touch ~/.pydistutils.cf
+$ echo "[install]\nprefix=" >> ~/.pydistutils.cfg
+```
+こうすると
+```
+pip3 install -r requirements.txt -t hello_world/build/
+```
+が通る
+
+#### local で API のテスト
+```
+$ sam local start-api
+```
+- http://127.0.0.1:3000/hello
+- すごい！出た！感動
+
+* GET パラメタ渡したい
+- 明日ね
+
 ### サーバレスアプリで db を使いたい
 
 - dynamoDB を調べる
