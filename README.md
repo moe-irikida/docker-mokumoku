@@ -57,7 +57,8 @@
 
 #### 2018/06/21
 - lambda で目的の function を作ることができた。(Webでコードを作成)
-- lambda で DB を使うとして、dynamoDB は業務に適さないことがわかった。
+- lambda で DB を使うとして、dynamoDB は write に向かないらしいので、使いどころとしては一時キャッシュだ
+- filesystem より read が早いなら、けっこういいかも(どうだろ)
 - lambda を cui(cli) で実行しようとしたが、role や設定がダメで、こけてしまった
 
 #### 2018/06/25
@@ -71,9 +72,19 @@
 
 #### 2018/06/28
 - lambda & API gateway on local
-- 自動でできた hello world 的なアプリにて、web API として動くことを確認。
+- 自動でできた hello world 的なアプリにて、web API として動くことを確認。(local)
 
 #### 2018/06/29
+- s3, cloudformation に UP。aws-cli を使って。
+- ロールにてこずって、時間がかかった。
+- s3 / lambda / cloudformation / global URL の関係性がつかめない
+- s3 にあげてるのか、cloudformation にあげてるのか、や、
+- AWS の web から確認した時、どこのサービスにあげたプロジェクトがあるのか、関係性がわからない
+- web API として global URL を発行したいが、よくわからない
+
+#### 2018/07/02
+- web API(global)を発行する
+- AWS の ブラウザサービスをいじって、サービスごとの関係性を理解する
 - web API(local)に、GET パラメタ渡して内容を変えてみたい
 
 ### phase3: ドキュメント作成ベストプラクティクスの調査

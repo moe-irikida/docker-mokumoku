@@ -114,8 +114,58 @@ $ sam local start-api
 - http://127.0.0.1:3000/hello
 - すごい！出た！感動
 
-* GET パラメタ渡したい
-- 明日ね
+#### グローバルで動かす
+
+```
+% aws s3 mb s3://hello-world-sam
+% sam package \
+     --template-file template.yaml \
+     --output-template-file packaged.yaml \
+     --s3-bucket hello-world-sam
+```
+
+#### ロールに苦戦 (!無駄)
+* ※sam コマンドにしないと、aws コマンドは、古い `aws-cli` を使った動作になるため、この項目は無駄(だけど、ためになった)
+
+- それで出てきたコマンド
+```
+% aws cloudformation deploy --template-file ~/Workspace/gh-dwango/docker-mokumoku/aws-lambda/sam-app/packaged.yaml --stack-name HelloWorldFunction
+```
+
+- AWSCloudFormationFullAccess がない？readonly というポリシーしかない。
+- インラインポリシーにて、このプログラムのみ適用される、"cloudformation:* " というオリジナルポリシーを作成。
+- 例:  https://docs.aws.amazon.com/ja_jp/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-cloudformation
+- をもとにして、自分のID、stack、programID的なものをARNに入力
+- (一度、例をコピペして、後で「ポリシーの編集」をして、自分のIDを入力するとやりやすい)
+- もう一回、ポリシーを入れろと出るので、記述されてるポリシーを、インラインポリシーに入力。
+- それで出たエラーにもとづいて、コマンドの最後に
+```
+--capabilities CAPABILITY_IAM
+```
+- を追記。つまり
+```
+% aws cloudformation deploy --template-file ~/Workspace/gh-dwango/docker-mokumoku/aws-lambda/sam-app/packaged.yaml --stack-name HelloWorldFunction --capabilities CAPABILITY_IAM
+...
+Failed to create/update the stack. Run the following command
+to fetch the list of events leading up to the failure
+aws cloudformation describe-stack-events --stack-name HelloWorldFunction
+```
+- 次に打つコマンドが載ってるけど、ここで README にもとづき、 sam コマンドでやる
+
+#### 改めて、sam で続き
+```
+% sam deploy \
+>     --template-file packaged.yaml \
+>     --stack-name sam-app \
+>     --capabilities CAPABILITY_IAM
+```
+- 2回、ポリシーの追加を要求されるので記載する
+- 次に打つコマンドが出てくるので、打つ
+```
+$ aws cloudformation describe-stack-events --stack-name sam-app
+```
+
+### API に GET パラメタ渡したい
 
 ### サーバレスアプリで db を使いたい
 
