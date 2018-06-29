@@ -163,7 +163,9 @@ aws cloudformation describe-stack-events --stack-name HelloWorldFunction
 - 次に打つコマンドが出てくるので、打つ
 ```
 $ aws cloudformation describe-stack-events --stack-name sam-app
+aws cloudformation describe-stacks --stack-name sam-app --query 'Stacks[].Outputs' --debug 2>&1
 ```
+- stdout に、グローバル URL が出るらしいが出ないX(
 
 ### API に GET パラメタ渡したい
 
