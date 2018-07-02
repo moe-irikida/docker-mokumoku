@@ -1,1 +1,1 @@
-{"title": "houshin"}
+{"name": "$input.params('name')"}

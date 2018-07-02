@@ -83,9 +83,14 @@
 - web API として global URL を発行したいが、よくわからない
 
 #### 2018/07/02
-- web API(global)を発行する
-- AWS の ブラウザサービスをいじって、サービスごとの関係性を理解する
-- web API(local)に、GET パラメタ渡して内容を変えてみたい
+- web API(global)を発行した
+- AWS の ブラウザサービスをいじって、サービスごとの関係性を理解した
+- web API(local)に、GET パラメタ渡して内容を変えてみてる途中
+
+#### 2018/07/03
+- web API(local)(helloworld改造)に、GET パラメタ渡す
+- 上記をweb API(global)で動かす
+- アニメの API を乗せる
 
 ### phase3: ドキュメント作成ベストプラクティクスの調査
 * ワークフローを text で表現する記法を調べる

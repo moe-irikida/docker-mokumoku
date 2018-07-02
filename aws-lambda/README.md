@@ -163,11 +163,15 @@ aws cloudformation describe-stack-events --stack-name HelloWorldFunction
 - 次に打つコマンドが出てくるので、打つ
 ```
 $ aws cloudformation describe-stack-events --stack-name sam-app
-aws cloudformation describe-stacks --stack-name sam-app --query 'Stacks[].Outputs' --debug 2>&1
+$ aws cloudformation describe-stacks --stack-name sam-app --query 'Stacks[].Outputs'
 ```
 - stdout に、グローバル URL が出るらしいが出ないX(
+- それは、deploy がこけていたw ポリシーに IAM:FullAccess を追加したら、無事OK。
+- describe-stack -> stdout にグローバル URI が出た！！やったー hello-world 完了。
 
 ### API に GET パラメタ渡したい
+
+- event['queryStringParameters'] に入ってるっぽいが認識しない？
 
 ### サーバレスアプリで db を使いたい
 
