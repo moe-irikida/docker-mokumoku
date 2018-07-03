@@ -13,9 +13,10 @@ def lambda_handler(event, context):
 		title = event["queryStringParameters"]['title']
 
 		if (title == 'houshin'):
-			for chara in jsondata["houshin"]:
-				chara['url'] = "https://ja.wikipedia.org/wiki/" + chara["voice"]
-				charas.append(chara)
+			charas = jsondata["houshin"]
+			for i, chara in enumerate(charas):
+				voice_strip = chara["voice"].replace(" ", "").replace("　", "")
+				charas[i]['url'] = "https://ja.wikipedia.org/wiki/" + voice_strip
 
 	else:
 		title = 'non title'
@@ -25,5 +26,5 @@ def lambda_handler(event, context):
         "body": json.dumps({
             'title': title,
             'data': charas
-        })
-    }
+        }, ensure_ascii=False)
+	}

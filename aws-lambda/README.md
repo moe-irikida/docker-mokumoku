@@ -180,6 +180,9 @@ $ aws cloudformation describe-stacks --stack-name sam-app --query 'Stacks[].Outp
 
 ## lambda 前作ったホウシンのプログラムを動かす
 
+- 一連の操作が動いた！(global API gateway も)
+- 名前に hello-world が残っているので、対処したい
+
 ### サーバレスアプリで db を使いたい
 
 - dynamoDB を調べる

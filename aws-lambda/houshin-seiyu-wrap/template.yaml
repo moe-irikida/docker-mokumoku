@@ -13,10 +13,10 @@ Globals:
 
 Resources:
 
-    HelloWorldFunction:
+    SeiyuWikipediaFunction:
         Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
         Properties:
-            CodeUri: hello_world/build/
+            CodeUri: houshin_seiyu/build/
             Handler: app.lambda_handler
             Runtime: python3.6
             Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
@@ -26,19 +26,19 @@ Resources:
                 HelloWorld:
                     Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
                     Properties:
-                        Path: /hello
+                        Path: /seiyu
                         Method: get
 
 Outputs:
 
-    HelloWorldApi:
+    SeiyuWikipediaApi:
       Description: "API Gateway endpoint URL for Prod stage for Hello World function"
-      Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+      Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/seiyu/"
 
-    HelloWorldFunction:
+    SeiyuWikipediaFunction:
       Description: "Hello World Lambda Function ARN"
       Value: !GetAtt HelloWorldFunction.Arn
 
-    HelloWorldFunctionIamRole:
+    SeiyuWikipediaFunctionIamRole:
       Description: "Implicit IAM Role created for Hello World function"
       Value: !GetAtt HelloWorldFunctionRole.Arn
