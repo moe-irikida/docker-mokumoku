@@ -27,7 +27,7 @@ Outputs:
 Resources:
   HelloWorldFunction:
     Properties:
-      CodeUri: s3://hello-world-sam/0cb21880069bab919a655b5132e8f448
+      CodeUri: s3://hello-world-sam/7f7d7d00cc1bc10349c95047ec47beac
       Environment:
         Variables:
           PARAM1: VALUE

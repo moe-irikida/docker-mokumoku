@@ -172,6 +172,13 @@ $ aws cloudformation describe-stacks --stack-name sam-app --query 'Stacks[].Outp
 ### API に GET パラメタ渡したい
 
 - event['queryStringParameters'] に入ってるっぽいが認識しない？
+- event["queryStringParameters"]['name'] で取れた。シングルクオートとダブルクオートって区別されるの！？
+
+#### global API に GET パラメタ渡したい
+
+- README に則って upload して、/Prod/hello/?name=moe とすると、ブラウザ上で「moe」を表示できた。
+
+## lambda 前作ったホウシンのプログラムを動かす
 
 ### サーバレスアプリで db を使いたい
 

@@ -16,8 +16,9 @@ def lambda_handler(event, context):
 
 	ip = requests.get('http://checkip.amazonaws.com/')
 
-	if (event.get('queryStringParameters') is not None):
-		name = event.queryStringParameters['name']
+	if (event.get("queryStringParameters") is not None \
+		and event["queryStringParameters"].get('name') is not None):
+		name = event["queryStringParameters"]['name']
 	else:
 		name = "unknown"
 
@@ -27,7 +28,6 @@ def lambda_handler(event, context):
 		"body": json.dumps({
 			'message': 'hello world',
 			'location': ip.text.replace('\n', ''),
-			'name': name,
-			'event': event
+			'name': name
 		})
 	}
