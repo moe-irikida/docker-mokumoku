@@ -96,9 +96,22 @@
 - アニメの API の function 名などに hello-world という名称が残っているので対応
 
 ### Phase3: docker ふたたび
+
+### 2018/07/05-06
+- 公式 document を読んだ。
+- docker image と docker コンテナについてわかった
+> docker image は Read-only のシステムイメージ。
+> docker image にコンテナレイヤが重なって、コンテナとなる。
+> コンテナレイヤは docker image (サーバ構成)から書き換わったファイルを持つ。
+
+- docker のファイルシステムについての公式 document を読んだ
+- mac は overlay2 という、本番環境非推奨のファイルシステムみたい
+- linux @ VM でいろいろ変えて操作感、状態、エラーメッセージなど調査したい
+
 - python の実行環境を作る
 * TODO: 外部からネットワーク接続うんぬん
 * TODO: DockerHub のきになるイメージを触る
+* TODO: ネットワークについていじる
 
 ### 案: ドキュメント作成ベストプラクティクスの調査
 * ワークフローを text で表現する記法を調べる
