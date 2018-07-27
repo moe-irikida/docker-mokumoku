@@ -130,6 +130,12 @@
 - ちなみに ifconfig や ping は、busybox イメージなら元々入ってる。ubuntu ネットワークは入れるの難しい、resolv.conf を軽くいじったけど諦めた。。
 - docker-machine, docker-swarm を、AWS でポケットマネーを出しつついじってみるぞ、というか AWS へのデプロイをやってみたいぞ。めっちゃ請求来ないでしょうね。。
 
+### 2018/07/18-24
+- docker swarm を mac 上で動かす。
+- AWS VPC を、チュートリアルみながら動かす
+- ECS のウィザードで勝手に作ってくれるやつを流されるままにやるが、全然わからない
+
+
 ## TODO
 - python の実行環境を作る
 - DockerHub のきになるイメージを触る
